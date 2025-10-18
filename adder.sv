@@ -1,13 +1,4 @@
-// SystemVerilog version of inverter
 timeunit 1ns; timeprecision 1ps;
-
-module inverter (
-    input  logic in,
-    output logic out
-);
-    // Combinational inversion
-    assign out = ~in;
-endmodule
 
 module fullAdder(a, b, cin, s, cout);
     input wire a, b, cin;
@@ -47,13 +38,4 @@ module thirtytwoBitAdder(
     fourBitAdder fa6(a[27:24], b[27:24], c6, s[27:24], c7);
     fourBitAdder fa7(a[31:28], b[31:28], c7, s[31:28], cout);
 
-endmodule
-
-module fullInverter
-     (
-    input  logic [31:0] in,
-    output logic [31:0] out
-);
-    // Combinational inversion
-    assign out = ~in;
 endmodule
